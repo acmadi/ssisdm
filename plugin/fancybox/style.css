@@ -1,0 +1,82 @@
+html, body, div, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    color: #262626;
+	background: #f4f4f4;
+	font: normal 12px/18px Verdana, sans-serif;
+}
+
+#content {
+	width: 80%;
+	margin: 5px auto 0 auto;
+	padding: 0 20px 30px 20px;
+	border: solid 1px #cbcbcb;
+	background: #fafafa;
+	-webkit-box-shadow: 0px 0px 8px #c7c7c7;
+	-moz-box-shadow: 0px 0px 8px #c7c7c7;
+	box-shadow: 0px 0px 8px #c7c7c7;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px; /* CSS3 */
+	padding:8px;
+}
+
+h1 {
+	margin: 5px 0 10px 0;
+	font-size: 28px;
+	font-weight: bold;
+	font-family:arial, Verdana;
+}
+
+h1 span {
+	font-size: 45%;
+	margin-left:500px;
+	letter-spacing: -0.05em;
+}
+
+hr {
+	border: none;
+	height: 1px; line-height: 1px;
+	background: #E5E5E5;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 5px 0;
+}
+
+a {
+	outline: none;
+	text-decoration:none;
+}
+
+a img {
+	border: 0px;
+	padding: 2px;
+	margin: 10px 20px 10px 0;
+	vertical-align: top;
+}
+
+a img.last {
+	margin-right: 0;	
+}
+
+ul {
+	margin-bottom: 24px;
+	padding-left: 30px;
+}
+
+#footer
+{
+	color: #36479c; 
+	padding-top:5px; 
+	padding-bottom:5px; 
+	text-align:center;
+}
+
+

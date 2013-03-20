@@ -1,0 +1,22 @@
+body .xboxcontent{
+    font-family:helvetica,tahoma,verdana,sans-serif;
+    //padding:20px;
+    //font-size:13px;
+    //margin:0;
+}
+
+.demo-info{
+	font-size:10px;
+	background:#FFFEE6;
+	color:#8F5700;
+	padding:12px;
+	position: relative;
+	top: 10px;
+	width: 90%; 
+}
+.demo-tip{
+	width:24px;
+	height:16px;
+	float:left;
+}
+

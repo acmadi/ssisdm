@@ -1,0 +1,7 @@
+<?php
+
+$heading='UNISADHUGUNA';
+
+$footer='Copyright &copy; 2011 Ganesha Multi Sarana';
+$web_root = $_SERVER["DOCUMENT_ROOT"]."usg";
+?>

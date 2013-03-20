@@ -1,0 +1,9 @@
+<div id="nav">
+
+	<span id="nav_index"><a href="index.php">Home</a></span>
+	<span id="nav_about"><a href="about.php">About</a></span>
+	<a href="#">Portfolio</a>
+	<a href="#">Contact</a>
+	<a href="tes1.php">tes</a>
+	
+</div> <!-- end #nav -->

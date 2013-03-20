@@ -1,0 +1,10 @@
+<?php
+session_start();
+$nama=$_SESSION['Name'];
+$orgName=$_SESSION['orgName'];
+$orgId=$_SESSION['orgId'];
+
+if (empty($nama)) {
+	header("location: index.php");
+}
+?>

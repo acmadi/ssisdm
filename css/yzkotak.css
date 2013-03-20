@@ -1,0 +1,52 @@
+.satu {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 30px;
+	//width: 100px;
+	height: 70px;
+	background-color: #2F7895;
+	text-align: center;
+	color: lime;
+}
+
+.gambarya {
+	url(images/tick.png);
+}
+
+#arrow-box{
+    height:100px;
+    width:100px;
+    background:red;
+    border:1px solid #000;
+    position:relative;
+    }
+
+.arrow{
+     height: 10px;
+     width: 10px;
+     margin-left:30px;
+    margin-top:-11px;
+    background:red;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    border-right:1px solid #000;
+    border-bottom:1px solid #000;
+    position:absolute;
+    bottom:-10px;
+    left:20px;
+	
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476); /* IE6,IE7 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)"; /* IE8 */}
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+    z-index: 0;
+}

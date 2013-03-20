@@ -1,0 +1,51 @@
+DELIMITER $$
+
+USE `dbssisdm`$$
+
+DROP VIEW IF EXISTS `view_emp_pegawai`$$
+
+CREATE  VIEW `view_emp_pegawai` AS (
+SELECT
+
+  `dbssisdm`.`peg_personal`.*,
+  `dbssisdm`.`status_kerja`.`status_kerja`     AS `status_kerja`,
+  `dbssisdm`.`agama`.`agama`                   AS `agama`,
+  `dbssisdm`.`ref_kota`.`nm_kota`              AS `nm_kota_sekarang`,
+  `dbssisdm`.`ref_kota1`.`nm_kota`             AS `nm_kota_asal`,
+  `dbssisdm`.`peg_dinas`.`npp`                 AS `npp`,
+  `dbssisdm`.`peg_dinas`.`pangkat_id`          AS `pangkat_id`,
+  `dbssisdm`.`pangkat`.`pangkat`               AS `pangkat`,
+  `dbssisdm`.`peg_dinas`.`jabatan_id`          AS `jabatan_id`,
+  `dbssisdm`.`jabatan`.`jabatan`               AS `jabatan`,
+  `dbssisdm`.`peg_dinas`.`lokasi_id`           AS `lokasi_id`,
+  `dbssisdm`.`lokasi_kerja`.`lokasi_kerja`     AS `lokasi_kerja`,
+  `dbssisdm`.`peg_dinas`.`unit_bisnis_id`      AS `unit_bisnis_id`,
+  `dbssisdm`.`unit_bisnis`.`unit_bisnis`       AS `unit_bisnis`,
+  `dbssisdm`.`peg_dinas`.`narasi`              AS `narasi2`,
+  `dbssisdm`.`peg_dinas`.`aktif`               AS `kontrakaktif`,
+  `dbssisdm`.`peg_dinas`.`kontrak_ke`          AS `kontrak_ke`,
+  `dbssisdm`.`peg_dinas`.`nokontrak_SK`        AS `nokontrak_SK`,
+  `dbssisdm`.`peg_dinas`.`tgl_awal`            AS `tgl_awal`,
+  `dbssisdm`.`peg_dinas`.`tgl_akhir`           AS `tgl_akhir`
+FROM (((((((((`peg_personal`
+           LEFT JOIN `status_kerja`
+             ON ((`dbssisdm`.`status_kerja`.`status_kerja_id` = `dbssisdm`.`peg_personal`.`status_kerja_id`)))
+          LEFT JOIN `agama`
+            ON ((`dbssisdm`.`agama`.`agama_id` = `dbssisdm`.`peg_personal`.`agama_id`)))
+         LEFT JOIN `ref_kota`
+           ON ((`dbssisdm`.`ref_kota`.`kode` = `dbssisdm`.`peg_personal`.`kode_asal`)))
+        LEFT JOIN `ref_kota1`
+          ON ((`dbssisdm`.`ref_kota1`.`kode` = `dbssisdm`.`peg_personal`.`kode_sekarang`)))
+       LEFT JOIN `peg_dinas`
+         ON ((`dbssisdm`.`peg_dinas`.`peg_id` = `dbssisdm`.`peg_personal`.`peg_id`)))
+      LEFT JOIN `pangkat`
+        ON ((`dbssisdm`.`pangkat`.`pangkat_id` = `dbssisdm`.`peg_dinas`.`pangkat_id`)))
+     LEFT JOIN `jabatan`
+       ON ((`dbssisdm`.`jabatan`.`jabatan_id` = `dbssisdm`.`peg_dinas`.`jabatan_id`)))
+    LEFT JOIN `lokasi_kerja`
+      ON ((`dbssisdm`.`lokasi_kerja`.`lokasi_id` = `dbssisdm`.`peg_dinas`.`lokasi_id`)))
+   LEFT JOIN `unit_bisnis`
+     ON ((`dbssisdm`.`unit_bisnis`.`unit_bisnis_id` = `dbssisdm`.`peg_dinas`.`unit_bisnis_id`)))
+WHERE (`dbssisdm`.`peg_dinas`.`aktif` = 1))$$
+
+DELIMITER ;
